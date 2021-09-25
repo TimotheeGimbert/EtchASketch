@@ -2,7 +2,7 @@
 // VARIABLES //
 ///////////////
 
-let boxesPerLine = 16;
+let lineDensity = 16;
 
 
 ///////////////
@@ -10,21 +10,33 @@ let boxesPerLine = 16;
 ///////////////
 
 function setGrid(n) {
-    for (let i = 1; i <= n; i++) { // 16 initial lines
-        const line = document.createElement('section'); // lines are sections
-        for (let i = 1; i <= n; i++) { // 16 initial boxes
-            const div = document.createElement('div'); // boxes are divs
+    // creates a grid of n*n divs
+    for (let i = 1; i <= n; i++) {
+        const line = document.createElement('section'); // grid lines are sections
+        for (let i = 1; i <= n; i++) {
+            const div = document.createElement('div'); // grid elements are divs
             line.appendChild(div);
         }
         container.appendChild(line);
     }
 }
 
-function newGrid() {
-    const initialGridWidth = 16*document.querySelector('section > div').offsetWidth;
-    const boxesPerLine = prompt("How many boxes per line for the new grid?");
-    const newBoxWidth = initialGridWidth / boxesPerLine;
-    return newBoxWidth
+function getLineWidth() {
+    // calculates the width of the current grid, and returns it
+    const width = lineDensity * document.querySelector('section > div').offsetWidth;
+    return width;
+}
+
+function getNewDensity() {
+    // prompts for the number of boxes per line for the new grid, and returns it
+    const newDensity = prompt("How many boxes per line for the new grid?");
+    return newDensity;
+}
+
+function getNewBoxWidth() {
+    // calculate the new box width based on the new density, and returns it
+    const newBoxWidth = getLineWidth() / getNewDensity();
+    return newBoxWidth;
 }
 
 
@@ -33,7 +45,7 @@ function newGrid() {
 ///////////////
 
 const container = document.querySelector('#container');
-setGrid(boxesPerLine);
+setGrid(lineDensity);
 
 let boxes = document.querySelectorAll('section > div');
 boxes.forEach(box => {

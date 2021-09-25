@@ -1,20 +1,20 @@
 #container {
-    background-color: beige;
+    background-color: rgb(230, 230, 31);
     display: flex;
     flex-flow: column nowrap;
+
+    width: 480px;
 }
 
 section {
     display: flex;
-    flex-flow: row nowrap;
     justify-content: center;
-    background-color: rgb(199, 195, 191);
+    background-color: rgb(214, 112, 11);
 }
 
-section div {
-    width: 20px;
-    height: 20px;
+section > div {
+    width: 10px;
+    height: 10px;
     background-color: white;
-    border: 1px solid black;
 }
 

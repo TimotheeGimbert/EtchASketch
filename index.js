@@ -16,3 +16,9 @@ boxes.forEach(box => {
     });
 });
 
+const clearButton = document.querySelector('button');
+clearButton.addEventListener('click', () => {
+    boxes.forEach(box => {
+        box.style.cssText = "background-color: white;";
+    });
+});

@@ -1,5 +1,7 @@
 #container {
     background-color: beige;
+    display: flex;
+    flex-flow: column nowrap;
 }
 
 section {
@@ -15,3 +17,4 @@ section div {
     background-color: white;
     border: 1px solid black;
 }
+

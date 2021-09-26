@@ -2,22 +2,17 @@
     display: flex;
     flex-direction: column; 
     align-items: center;
-    width: 600px;
 }
 
 #container {
     display: flex;
     flex-direction: column;
-    
-    width: 300px;
+    border: 1px solid black;
+    width: 500px;
 }
 
 .row {
     display: flex;
-}
-
-.box {
-    border: 1px solid black;
 }
 
 button {

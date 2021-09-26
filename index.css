@@ -1,20 +1,25 @@
+#page {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    width: 600px;
+}
+
 #container {
-    background-color: rgb(230, 230, 31);
     display: flex;
-    flex-flow: column nowrap;
-
-    width: 480px;
+    flex-direction: column;
+    
+    width: 300px;
 }
 
-section {
+.row {
     display: flex;
-    justify-content: center;
-    background-color: rgb(214, 112, 11);
 }
 
-section > div {
-    width: 20px;
-    height: 20px;
-    background-color: white;
+.box {
+    border: 1px solid black;
 }
 
+button {
+    width: 100px;
+}

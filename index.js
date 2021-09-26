@@ -34,7 +34,8 @@ function colorGrid() { // eventListener that colors boxes in black when hovered
 }
 
 function askGridDensity() { // prompts the user to choose new grid density, and returns it
-    let newGridDensity = prompt("How many boxes per line for the new grid?");
+    let newGridDensity = prompt("How many boxes per line for the new grid? (max 64)");
+    while (newGridDensity > 64) newGridDensity = prompt("How many boxes per line for the new grid? (max 64)");
     return newGridDensity;
 }
 
